@@ -29,17 +29,17 @@ class App < Sinatra::Base
     @operator = params[:operation]
 
     if @operator == "add"
-      @result = (params[:number1].to_i) + (params[:number2].to_i)
-    
+      @result = (params[:number1].to_i) + (params[number2].to_i)
+      binding.pruy
     elsif @operator == "subtract"
-      @result = (params[:number1].to_i) - (params[:number2].to_i)
-      
+      @result = (params[:number1].to_i) - (params[number2].to_i)
+      binding.pruy
     elsif @operator == "multiply"
-      @result = (params[:number1].to_i) * (params[:number2].to_i)
-      
+      @result = (params[:number1].to_i) * (params[number2].to_i)
+      binding.pruy
     else @operator == "divide"
-      @result = (params[:number1].to_i) / (params[:number2].to_i)
-      
+      @result = (params[:number1].to_i) / (params[number2].to_i)
+      binding.pruy
     end
     @result.to_s
   end

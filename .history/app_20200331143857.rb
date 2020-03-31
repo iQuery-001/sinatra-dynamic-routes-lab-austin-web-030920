@@ -1,5 +1,4 @@
 require_relative 'config/environment'
-require 'pry'
 
 class App < Sinatra::Base
   # Write your code here!
@@ -27,18 +26,18 @@ class App < Sinatra::Base
 
   get '/:operation/:number1/:number2' do
     @operator = params[:operation]
-
+    
     if @operator == "add"
-      @result = (params[:number1].to_i) + (params[:number2].to_i)
+      @result = (params[:number1].to_i) + (params[number2].to_i)
     
     elsif @operator == "subtract"
-      @result = (params[:number1].to_i) - (params[:number2].to_i)
+      @result = (params[:number1].to_i) - (params[number2].to_i)
       
     elsif @operator == "multiply"
-      @result = (params[:number1].to_i) * (params[:number2].to_i)
+      @result = (params[:number1].to_i) * (params[number2].to_i)
       
     else @operator == "divide"
-      @result = (params[:number1].to_i) / (params[:number2].to_i)
+      @result = (params[:number1].to_i) / (params[number2].to_i)
       
     end
     @result.to_s
